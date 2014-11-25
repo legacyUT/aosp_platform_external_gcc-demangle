@@ -60,20 +60,20 @@ include $(BUILD_HOST_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := test.c
+LOCAL_SRC_FILES := demangle_test.cpp
 LOCAL_SHARED_LIBRARIES := libgccdemangle
 LOCAL_MODULE := gccdemangle_test
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_EXECUTABLE)
+include $(BUILD_NATIVE_TEST)
 
 ##########################
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := test.c
+LOCAL_SRC_FILES := demangle_test.cpp
 LOCAL_SHARED_LIBRARIES := libgccdemangle
 LOCAL_MODULE := gccdemangle_test
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_HOST_EXECUTABLE)
+include $(BUILD_HOST_NATIVE_TEST)
